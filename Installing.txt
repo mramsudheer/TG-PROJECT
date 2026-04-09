@@ -4,3 +4,19 @@ chmod u+x terragrunt
 sudo mv terragrunt /usr/local/bin/terragrunt
 terragrunt --version
 C:\DevOps_Practice_Code\TG-PROJECT
+
+-------------------------------------------------------------
+
+When we run terragrunt int or apply, terragraunt will generates one 'terragraunt-cache'
+folder under infrastructure-live\dev\vpc in that it will gererate provider.tf,
+backend.tf, output.tf, main.tf
+
+In root.hcl we declared  key = "${path_relative_to_include()}/terraform.tfstate"
+what happens is when we run terragraunt apply, in the give S3 bucket it will
+create terraform.tfstate file under <s3 bucket>/dev/vpc/
+we are running terragraunt apply in /dev/vpc/ so that is used as a key
+Like this it will create a saperate tfstate file for each folder(vpc,subnet...)
+
+IF you want to deploy the same code for prod. Just copy the terragrunt.hcl file
+from dev/vpc to prod/vpc and change the input values.
+
