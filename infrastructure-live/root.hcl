@@ -28,7 +28,7 @@ remote_state {
     # encrypt        = true
     # dynamodb_table = "my-lock-table"
   }
-  gernate "backend" {
+  generate "backend" {
     path      = "backend.tf"
     if_exists = "overwrite_terragrunt"
     #contents  = <<EOF
