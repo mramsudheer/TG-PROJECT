@@ -1,0 +1,6 @@
+wget https://github.com/gruntwork-io/terragrunt/releases/download/v1.0.0/terragrunt_linux_386
+mv terragrunt_linux_386 terragrunt
+chmod u+x terragrunt
+sudo mv terragrunt /usr/local/bin/terragrunt
+terragrunt --version
+C:\DevOps_Practice_Code\TG-PROJECT
