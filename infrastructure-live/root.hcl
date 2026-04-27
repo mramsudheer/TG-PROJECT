@@ -1,5 +1,6 @@
 # Ealrier, the file name is terragrunt.hcl, 
-# but now terraform is suggesting it to use root.hcl, because it is the root configuration file for our infrastructure.
+# but now terraform is suggesting it to use root.hcl, 
+# because it is the root configuration file for our infrastructure.
 
 # If i execute this block in DEV environment, 
 # it will create provider.tf file with the content of provider block.
